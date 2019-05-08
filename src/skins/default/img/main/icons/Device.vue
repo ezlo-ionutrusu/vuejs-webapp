@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
  <template>
   <svg viewBox="0 0 29.84 32.129" xmlns="http://www.w3.org/2000/svg">
     <title>devices</title>
