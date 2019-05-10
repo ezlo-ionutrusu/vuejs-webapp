@@ -1,3 +1,8 @@
+const path = require('path');
+const { appSettings } = require('./package.json');
+
+const skin = appSettings.defaultSkin;
+
 module.exports = {
   productionSourceMap: false,
   chainWebpack: (config) => {
@@ -6,5 +11,6 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule.use('vue-svg-loader').loader('vue-svg-loader');
+    config.resolve.alias.set('@skins', path.resolve(__dirname, `./src/skins/${skin}`));
   },
 };

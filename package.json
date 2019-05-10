@@ -49,6 +49,9 @@
       "autoprefixer": {}
     }
   },
+  "appSettings": {
+    "defaultSkin": "default"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
