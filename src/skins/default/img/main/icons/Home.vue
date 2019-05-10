@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import Home from '@/skins/default/img/svg/home.svg';
+import Home from '@skin/img/svg/home.svg';
 
 export default
 {
