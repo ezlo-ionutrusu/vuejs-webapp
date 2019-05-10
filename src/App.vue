@@ -12,3 +12,6 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+@import "@/skins/default/styles/globals.scss";
+</style>
