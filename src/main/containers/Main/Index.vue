@@ -25,8 +25,8 @@ export default {
   },
   components:
   {
-    'home-logo': () => import('@/skins/default/img/main/icons/Home.vue'),
-    'device-logo': () => import('@/skins/default/img/main/icons/Device.vue'),
+    'home-logo': () => import('@skin/img/main/icons/Home.vue'),
+    'device-logo': () => import('@skin/img/main/icons/Device.vue'),
   },
   methods:
   {

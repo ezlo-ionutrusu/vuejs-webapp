@@ -11,6 +11,6 @@ module.exports = {
     svgRule.uses.clear();
 
     svgRule.use('vue-svg-loader').loader('vue-svg-loader');
-    config.resolve.alias.set('@skins', path.resolve(__dirname, `./src/skins/${skin}`));
+    config.resolve.alias.set('@skin', path.resolve(__dirname, `./src/skins/${skin}`));
   },
 };
