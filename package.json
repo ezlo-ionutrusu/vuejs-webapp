@@ -4,16 +4,20 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "serve:skin:orm": "cross-env process.env.VUE_APP_SKIN='orm' vue-cli-service serve",
+    "serve:skin:orm": "cross-env process.env.VUE_APP_SKIN='orm' process.env.VUE_APP_ENV='ezlo' vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "lodash": "^4.17.11",
+    "md5": "^2.2.1",
     "node-sass": "^4.12.0",
+    "pako": "^1.0.10",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "websocket-rpc-client": "^0.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
@@ -40,7 +44,9 @@
     "rules": {
       "linebreak-style": 0,
       "no-param-reassign": 0,
-      "max-len": 0
+      "max-len": 0,
+      "import/no-named-as-default": 0,
+      "no-underscore-dangle": 0
     },
     "parserOptions": {
       "parser": "babel-eslint"

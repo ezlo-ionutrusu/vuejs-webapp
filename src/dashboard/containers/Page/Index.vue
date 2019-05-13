@@ -17,6 +17,8 @@
 import mixins from '@/dashboard/mixins/';
 import { mapGetters } from 'vuex';
 
+import { getAuthProvider } from '@/API/';
+
 export default {
   mixins: [mixins],
   data() {
@@ -37,12 +39,11 @@ export default {
       this.$store.dispatch('dashboard/setTitleDashboard', this.title);
     },
     async loginProcess(proxy) {
-      this.loginInformation = 'Fetching...';
+      this.loginInformation = `Fetching from ${proxy}...`;
       this.isDisabled = true;
       const data = await (await (fetch(proxy)
         .then(res => res)
         .catch((err) => {
-          console.log('Error: ', err);
           this.isDisabled = false;
           this.loginInformation = err;
         })
@@ -55,7 +56,6 @@ export default {
         this.loginProcess(proxy).then((data) => {
           if (data) {
             this.loginInformation = data.status;
-            console.log(data);
             this.isDisabled = false;
           }
         });
@@ -63,7 +63,9 @@ export default {
     },
   },
   mounted() {
+    this.loginInformation = 'Connecting...';
     this.title = this['dashboard/getTitleDashboard'];
+    getAuthProvider().auth.connect().then((response) => { this.loginInformation = JSON.parse(JSON.stringify(response)); });
   },
 };
 </script>

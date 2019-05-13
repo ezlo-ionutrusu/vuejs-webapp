@@ -1,0 +1,11 @@
+{
+  "url": "wss://nma-qa.ezlo.com:443",
+  "reconnectTimeout": 5000,
+  "reconnectCount": 3,
+  "account": {
+    "email": "dampirefh@gmail.com",
+    "password": "22222222",
+    "locale": "en_US",
+    "uiType": "Web"
+  }
+}

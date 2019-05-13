@@ -1,0 +1,12 @@
+{
+  "baseURL": "",
+  "apiURL": "api",
+  "routes": {
+    "login": "login",
+    "addHub": "setup"
+  },
+  "url": "wss://tiny.ezlo.com:443",
+  "staticServer": "https://vera-eu-oem-relay12.mios.com/www/1.7.4062-en/skins/default/img/wizard/wizard_v3_images",
+  "reconnectTimeout": 5000,  
+  "reconnectCount": 3
+}
