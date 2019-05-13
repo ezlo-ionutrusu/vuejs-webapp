@@ -4,7 +4,7 @@ import Main from '@/main/containers/Main/Index.vue';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -21,3 +21,4 @@ export default new Router({
     { path: '*', redirect: '/' },
   ],
 });
+export default router;

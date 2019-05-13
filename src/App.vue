@@ -5,10 +5,17 @@
 </template>
 <script>
 import Page from '@/main/containers/Page/Index.vue';
+import { getAuthProvider } from '@/API/';
 
 export default {
   components: {
     'page-component': Page,
+  },
+  mounted() {
+    try {
+      this.loginInformation = 'Connecting...';
+      getAuthProvider().auth.connect().then((response) => { console.log(response); });
+    } catch (err) { console.log(err); }
   },
 };
 </script>

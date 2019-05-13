@@ -17,8 +17,6 @@
 import mixins from '@/dashboard/mixins/';
 import { mapGetters } from 'vuex';
 
-import { getAuthProvider } from '@/API/';
-
 export default {
   mixins: [mixins],
   data() {
@@ -63,9 +61,7 @@ export default {
     },
   },
   mounted() {
-    this.loginInformation = 'Connecting...';
     this.title = this['dashboard/getTitleDashboard'];
-    getAuthProvider().auth.connect().then((response) => { this.loginInformation = JSON.parse(JSON.stringify(response)); });
   },
 };
 </script>
