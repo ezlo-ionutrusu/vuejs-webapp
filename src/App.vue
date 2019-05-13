@@ -13,7 +13,6 @@ export default {
   },
   mounted() {
     try {
-      this.loginInformation = 'Connecting...';
       getAuthProvider().auth.connect().then((response) => { console.log(response); });
     } catch (err) { console.log(err); }
   },
