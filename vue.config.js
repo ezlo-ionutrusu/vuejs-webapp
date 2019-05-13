@@ -5,7 +5,7 @@ process.env.VUE_APP_PACKAGE = JSON.stringify(packageJson);
 
 const { appSettings } = packageJson;
 
-const skin = appSettings.defaultSkin;
+const skin = process.env.VUE_APP_SKIN || appSettings.defaultSkin;
 
 module.exports = {
   productionSourceMap: false,
