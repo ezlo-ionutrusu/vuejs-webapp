@@ -14,6 +14,11 @@ const router = new Router({
       component: Main,
     },
     {
+      path: '/scenes',
+      name: 'scenes',
+      component: () => import('@/scenes/containers/Page/Index.vue'),
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('@/dashboard/containers/Page/Index.vue'),

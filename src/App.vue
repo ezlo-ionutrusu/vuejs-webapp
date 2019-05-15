@@ -12,9 +12,8 @@ export default {
     'page-component': Page,
   },
   mounted() {
-    try {
-      getAuthProvider().auth.connect().then((response) => { console.log(response); });
-    } catch (err) { console.log(err); }
+    // eslint-disable-next-line no-console
+    getAuthProvider().auth.connect().then((response) => { console.log(response); });
   },
 };
 </script>
