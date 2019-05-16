@@ -1,6 +1,12 @@
 <template>
   <section>
-    <SearchBar/>
+    <SearchBar
+      hint="Search hint"
+      v-model="searchPhrase"
+      :text="searchPhrase"
+      @textChange="onTextChanged"
+      @submit="onSubmit"
+    />
     <ActionBar style="margin-top:15px">
       <StackLayout orientation="horizontal">
         <Label text="NativeScript" verticalAlignment="center"/>
@@ -29,25 +35,33 @@
 </template>
 <script>
 import {
-  ActionBar, ActionItem, Label, StackLayout, SearchBar,
-} from 'nativescript-vue-web';
+  ActionBar,
+  ActionItem,
+  Label,
+  StackLayout,
+  SearchBar
+} from "nativescript-vue-web";
 
 export default {
+  data() {
+    return {
+      searchPhrase: null
+    };
+  },
   components: {
     ActionBar,
     Label,
     ActionItem,
     StackLayout,
-    SearchBar,
+    SearchBar
   },
-  methods:
-  {
-    onTapShare() {
-
-    },
-    onTapDelete() {
-
-    },
-  },
+  methods: {
+    onTapShare() {},
+    onTapDelete() {},
+    onTextChanged() {},
+    onSubmit() {
+      alert(this.searchPhrase);
+    }
+  }
 };
 </script>
