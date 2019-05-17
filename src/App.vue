@@ -1,15 +1,22 @@
-<template>
+<template web>
   <section class="main-application">
     <page-component></page-component>
   </section>
 </template>
+<template native>
+  <Page>
+    <Label textWrap="true" text="Play with NativeScript demo!"/>
+  </Page>
+</template>
 <script>
-import Page from '@/main/containers/Page/Index.vue';
+import MainPage from '@/main/containers/Page/Index.vue';
 import { getAuthProvider } from '@/API/';
+
+const { VUE_APP_MODE } = process.env;
 
 export default {
   components: {
-    'page-component': Page,
+    'page-component': MainPage,
   },
   mounted() {
     // eslint-disable-next-line no-console
