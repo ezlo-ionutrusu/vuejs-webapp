@@ -17,7 +17,7 @@
     "remove-webpack-config": "node ./node_modules/vue-cli-plugin-nativescript-vue/lib/scripts/webpack-maintenance post",
     "serve:android": "npm run setup-webpack-config && tns run android --bundle --env.development",
     "serve:ios": "npm run setup-webpack-config && tns run ios --bundle --env.development",
-    "serve:skin:orm": "cross-env process.env.VUE_APP_SKIN='orm' process.env.VUE_APP_ENV='ezlo' vue-cli-service serve",
+    "serve:skin:orm": "cross-env-shell process.env.VUE_APP_SKIN='orm' process.env.VUE_APP_ENV='ezlo' vue-cli-service serve",
     "serve:web": "vue-cli-service serve --mode development.web",
     "setup-webpack-config": "node ./node_modules/vue-cli-plugin-nativescript-vue/lib/scripts/webpack-maintenance pre"
   },
