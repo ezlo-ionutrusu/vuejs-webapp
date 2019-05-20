@@ -17,7 +17,7 @@
     "remove-webpack-config": "node ./node_modules/vue-cli-plugin-nativescript-vue/lib/scripts/webpack-maintenance post",
     "serve:android": "npm run setup-webpack-config && tns run android --bundle --env.development",
     "serve:ios": "npm run setup-webpack-config && tns run ios --bundle --env.development",
-    "serve:skin:orm": "cross-env-shell process.env.VUE_APP_SKIN='orm' process.env.VUE_APP_ENV='ezlo' vue-cli-service serve",
+    "serve:skin:orm": "vue-cli-service serve --mode skin",
     "serve:web": "vue-cli-service serve --mode development.web",
     "setup-webpack-config": "node ./node_modules/vue-cli-plugin-nativescript-vue/lib/scripts/webpack-maintenance pre"
   },
@@ -46,7 +46,6 @@
     "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "nativescript-dev-webpack": "^0.20.3",
